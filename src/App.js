@@ -1,5 +1,5 @@
 import './App.css';
-import { Button, Typography } from '@mui/material';
+import { Avatar, Button, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 function App() {
@@ -24,13 +24,25 @@ function App() {
           padding: '2rem',
         }}
       >
-        <Button variant="contained" color="secondary" fullWidth sx={{ mb: 2 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <Avatar
+            sx={{ width: 56, height: 56 }}
+            alt="Remy Sharp"
+            src="https://sm.imgix.net/22/09/lionel-messi.jpg"
+          />
+          <Typography variant="h4" gutterBottom>
+            Material UI
+          </Typography>
+        </div>
+
+        <Button
+          variant="contained"
+          color="secondary"
+          fullWidth
+          sx={{ mb: 2, mt: 2 }}
+        >
           Checkout
         </Button>
-
-        <Typography variant="h4" gutterBottom>
-          Material UI
-        </Typography>
 
         <LoadingButton
           loading={submitting}
