@@ -1,5 +1,5 @@
 import './App.css';
-import { Avatar, Button, Typography } from '@mui/material';
+import { Avatar, Button, Rating, TextField, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 function App() {
   const [submitting, setSubmitting] = useState(false);
+  const [rating, setRating] = useState(true);
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -64,6 +65,22 @@ function App() {
           <IconButton aria-label="delete">
             <DeleteIcon />
           </IconButton>
+        </div>
+        <div>
+          <Rating
+            name="simple-controlled"
+            value={rating}
+            onChange={(event, newValue) => {
+              setRating(newValue);
+            }}
+            sx={{
+              color: 'steelblue',
+            }}
+          />
+        </div>
+
+        <div>
+          <TextField id="outlined-basic" label="Outlined" variant="outlined" />
         </div>
       </div>
     </div>
