@@ -2,6 +2,9 @@ import './App.css';
 import { Avatar, Button, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 function App() {
   const [submitting, setSubmitting] = useState(false);
 
@@ -49,8 +52,19 @@ function App() {
           variant="outlined"
           onClick={() => setSubmitting(true)}
         >
-          Fetch data
+          Fetch Data
         </LoadingButton>
+
+        <div style={{ marginTop: '10px' }}>
+          <p>Material Icon</p>
+          <InstagramIcon color="primary" />
+        </div>
+        <div>
+          <p>Icon Button</p>
+          <IconButton aria-label="delete">
+            <DeleteIcon />
+          </IconButton>
+        </div>
       </div>
     </div>
   );
