@@ -1,5 +1,5 @@
 import './App.css';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 function App() {
@@ -27,6 +27,10 @@ function App() {
         <Button variant="contained" color="secondary" fullWidth sx={{ mb: 2 }}>
           Checkout
         </Button>
+
+        <Typography variant="h4" gutterBottom>
+          Material UI
+        </Typography>
 
         <LoadingButton
           loading={submitting}
